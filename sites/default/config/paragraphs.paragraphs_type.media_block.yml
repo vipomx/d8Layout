@@ -1,0 +1,9 @@
+uuid: d8afa3d3-0794-49b7-a8fe-b6f4a8156e88
+langcode: en
+status: true
+dependencies: {  }
+id: media_block
+label: 'Media Block'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

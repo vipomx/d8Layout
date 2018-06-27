@@ -297,7 +297,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'nXW4El0r5dWDag0nm-FNnCedguTgqjJ81pyITDnZ29-LZHSurFE0dlmJka3ewU73FbF1f1ZKzQ';
 
 /**
  * Deployment identifier.
@@ -781,7 +781,10 @@ $settings['entity_update_batch_size'] = 50;
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
+
+$settings['install_profile'] = 'standard';
+$config_directories['sync'] = 'sites/default/config/';

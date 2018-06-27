@@ -1,0 +1,75 @@
+uuid: ba4b49cc-9ddc-4d1b-a5f8-d2198e429e38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carousel.field_content
+    - field.field.paragraph.carousel.field_title
+    - paragraphs.paragraphs_type.carousel
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          7e49b113-b125-43ad-be8d-81a1331fc449:
+            uuid: 7e49b113-b125-43ad-be8d-81a1331fc449
+            region: content
+            configuration:
+              id: 'field_block:paragraph:carousel:field_title'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          8f0fd41e-6088-4ec3-af5b-b5ecb4475626:
+            uuid: 8f0fd41e-6088-4ec3-af5b-b5ecb4475626
+            region: content
+            configuration:
+              id: 'field_block:paragraph:carousel:field_content'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+                type: entity_reference_revisions_entity_view
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+id: paragraph.carousel.default
+targetEntityType: paragraph
+bundle: carousel
+mode: default
+content:
+  field_content:
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,50 @@
+uuid: ebe5a70d-b67d-4e82-ba84-84061807cfec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordeon_.field_accordion_item
+    - paragraphs.paragraphs_type.accordeon_
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          1068ced2-db8b-43f6-9e0c-0e75cfd1ac15:
+            uuid: 1068ced2-db8b-43f6-9e0c-0e75cfd1ac15
+            region: content
+            configuration:
+              id: 'field_block:paragraph:accordeon_:field_accordion_item'
+              label_display: ''
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+id: paragraph.accordeon_.default
+targetEntityType: paragraph
+bundle: accordeon_
+mode: default
+content:
+  field_accordion_item:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }
